@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <div class="my-class" id="ar">Content 1</div>
-    <div class="my-class">Content 2
-        jffjfjf
-        fjfjffj
-    </div>
-    <div class="my-class">Content 3</div>
-
+  </head>
+  <body>
+    <button style="height: 2rem; width: 8rem; font-size: 1.2rem; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; background-color: black; color: white; border-radius: 10px;" onclick="clic()">clickme</button>
+    <button style="height: 2rem; width: 8rem; font-size: 1.2rem; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; background-color: black; color: white; border-radius: 10px;" onclick="remove()">removeme</button>
     <script>
-        // var element = document.getElementById('ar');
-        // console.log(element.innerHTML);
+        let div1 = document.createElement("div");
+        let image = document.createElement("img");
+        let desc = document.createElement("p");
+        let heading = document.createElement("h1");
 
-        let op= document.getElementsByClassName('my-class');
-        console.log(op[1].innerText);
+
+      function clic() {
+        div1.style.marginTop = "20px";
+        div1.style.height = "400px";
+        div1.style.width = "350px";
+        div1.style.border = "3px solid black";
+        document.body.append(div1);
+        
+        
+
+        image.src =
+          "https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630";
+        image.style.height = "50%";
+        image.style.width = "100%";
+
+        div1.append(image);
+
+        heading.innerHTML = "Nature";
+        div1.append(heading);
+
+        desc.innerHTML =
+          "Nature is the physical world and everything in it that is not made by humans. It includes the laws, elements, and processes that govern the universe, such as the weather, mountains, and reproduction. "
+        desc.style.padding = "10px";
+        div1.append(desc);
+      }
+      function remove(){
+
+        div1.remove();
+      }
+
     </script>
-</body>
-
+  </body>
 </html>
