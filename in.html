@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <ul>
+        <li id="pl" onclick="change()"> sumanth</li>
+        <li>gunnam</li>
+        <li>hii</li>
+    </ul>
+    <div>
+        <ul class="io">
+            <li>okk</li>
+            <li>okk1</li>
+            <li>okk2</li>
+        </ul>
+    </div>
+    <button onclick="addDiv()">clickme</button>
+
+    <script>
+        function change(){
+            let op=document.getElementById('pl');
+            op.innerText="sumanth gunnam";
+        }
+        function addDiv(){
+                let div1=document.createElement("div",)
+            div1.style.height="200px";
+            div1.style.width="152px";
+            div1.style.border="3px solid green"
+            //if we use append we can add multiple elements
+            document.body.append(div1,"hiiii");
+            //if we use appendchild we can add only one element
+            // document.body.appendChild(div1);
+
+
+           
+        }
+        
+
+    </script>
+</body>
+
+</html>
